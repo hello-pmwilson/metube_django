@@ -6,7 +6,6 @@ from django.urls import reverse
 # Create your views here.
 
 def login_view(request):
-    #the login view has a list of accounts previously used to log in
     if request.method == "POST":
         # Accessing username and password from form data
         username = request.POST["username"]
