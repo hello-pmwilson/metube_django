@@ -9,15 +9,14 @@ def upload(request):
     return render(request, "upload/upload.html")
 
 def upload_video(request):
-    return render(request, "upload/upload_video.html")
-
-    # if request.method == 'Post':
-    #     form = VideoUploadForm(request.POST, request.FILES)
-    #     if form.is_valid():
-    #         form.save()
-    #         return HttpResponseRedirect(reverse('home:home'))
+    if request.method == "POST":
+        form = VideoUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            #Process Form Data###
+            form.save()
+            return HttpResponseRedirect(reverse('home:home'))
     
-    # else:
-    #     form = VideoUploadForm()
-    #     return render(request, 'upload_video.html', {'form' : form})
-
+    else:
+        form = VideoUploadForm()
+        #return render(request, 'upload_video.html', {'form' : form})
+        return render(request, "upload/upload_video.html", {"form" : form})
