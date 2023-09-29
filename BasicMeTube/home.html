@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+  {% load bootstrap_icons %}
+  {% load static %}
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'home/home.css' %}">
+  <script>
+  //Check the size of the flex container
+  document.addEventListener('DOMContentLoaded', function(){
+    window.addEventListener("resize", function(){
+      var flexContainer = document.getElementById('search-bar-flex');
+      console.log(flexContainer)
+      var containerWidth = flexContainer.clientWidth;
+      console.log('Flex:' , containerWidth, 'pixels');
+    })    
+})
+//script currently records the width of the div with the search bar
+//but the width isnt actually changing.
+//todo make the search bar change size when larger
+//and then dissappear when too small
+  </script>
+</head>
+  
+<body>
+<!--Main Header-->
+<div class="container" id="maincontainer">
+    <div><!--Menu and Logo-->
+        <div>
+          {% bs_icon 'list' extra_classes="attention" size='2em' %}
+          {% bs_icon 'youtube' size='2em'%}
+          <h2>MeTube</h2>
+        </div>
+    </div>
+    <div class="search"> 
+        <h2>Search</h2>
+        <input id="search-bar"> <!-- Search Bar -->
+    </div>
+    <div>
+        <h2>Other Buttons Icons</h2>
+    </div>
+</div>
+
+<!--Main Content-->
+<div class="container">
+    <div>
+      Menu List
+    </div>
+<!--Next to Bar-->
+<div class="stretch">
+<!--Scrolling Options-->
+    <div>
+      Sorting List
+    </div>
+<!--Videos-->
+    <div>
+      Videos
+    </div>
+</div>
+</div>
+
+<!--Side Bar-->
+
+</div>
+</body>
+</html>
