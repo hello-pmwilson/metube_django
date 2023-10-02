@@ -1,3 +1,6 @@
+body {
+    background-color: white;
+}
 .list-container{
     display: inline-block;
     position: relative;
@@ -16,14 +19,69 @@
     z-index: -1; 
 } 
 
+/* div {
+    border-style: dotted;
+} */
 
-/* #container {
-    background-color: pink;
-    z-index: -3;
-    position: ;
-}  */
+.container {
+    border-style: solid;
+    display: flex;
+} 
 
 .attention {
     background-color: red;
     z-index: -2;
+}
+
+.search {
+    flex-grow: 10;
+}
+
+.stretch {
+    flex-grow: 10;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    display: inline;
+}
+.scroll-list {
+    white-space: nowrap;
+}
+
+.scrollable-buttons {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-button {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.transparent-rectangle {
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(to right, rgba(255,255,255,0.25), rgb(255,255,255,1));
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    left: -175px;
+    top: 20px;
+}
+
+#arrow {
+    background-color: white;
+    border-style: double;
+    position: relative;
+    z-index: 2;
 }
