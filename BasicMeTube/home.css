@@ -1,6 +1,112 @@
-body {
-    background-color: white;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+#wrapper {
+    width: 98%;
+    margin: auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    min-height: 50px;
+    align-items: center;
+}
+
+.container-in-header {
+    display: flex;
+    flex-direction: row;
+    width:200px;
+    justify-content: space-around;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#navigation svg {
+    width: 50px;
+}
+
+#logo {
+    width: 100px;
+}
+
+#search {
+    flex-grow: 1;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#account {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+.account-items:nth-child(2){
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+}
+
+#content-navigation-menu {
+    list-style-type: none;
+    width: 200px;
+}
+
+#content-navigation-menu li {
+    display: flex;
+    justify-content: space-around;
+}
+
+#content-navigation-menu svg {
+    justify-content: center;
+    width: 60px;
+}
+
+#content-navigation-menu span {
+    width: 100px;
+    justify-content: start;
+}
+
+@media (max-width: 1400px) {
+    #content-navigation-menu li{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content-navigation-menu span{
+        justify-content: center;
+        text-align: center;
+    }
+
+    #content-navigation-menu svg {
+        justify-content: center;
+        width: 50px;
+    }
+  
+    #content-navigation-menu {
+        width: 80px;
+    }
+
+}
+
+#content-other {
+    flex-grow: 1;
+}
+
+#content-video {
+    background-color: beige;
+}
+
 .list-container{
     display: inline-block;
     position: relative;
@@ -19,39 +125,10 @@ body {
     z-index: -1; 
 } 
 
-/* div {
-    border-style: dotted;
-} */
 
-.container {
-    border-style: solid;
-    display: flex;
-} 
-
-.attention {
-    background-color: red;
-    z-index: -2;
-}
-
-.search {
-    flex-grow: 10;
-}
-
-.stretch {
-    flex-grow: 10;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-span {
-    display: inline;
-}
 .scroll-list {
     white-space: nowrap;
+    min-height: 50px;
 }
 
 .scrollable-buttons {

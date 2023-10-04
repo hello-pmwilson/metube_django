@@ -8,27 +8,33 @@
 </head>
 
 <body>
-  <!--Main Header-->
-  <div class="container" id="maincontainer">
-    <div><!--Menu and Logo-->
-      <div class="container">
-        <p>List</p>
-        <p>Icon</p>
-        <h2>MeTube</h2>
+<div id="wrapper">
+  <div id="header">
+
+    <div class="container-in-header">
+      <div id="navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </div>
+      <div id="logo">
+        Logo
       </div>
     </div>
-    <div class="search">
-      <h2>Search</h2>
-      <input id="search-bar"> <!-- Search Bar -->
+
+    <div id="search">
+      <input id="search-bar">
     </div>
-    <div>
-      <h2>Other Buttons Icons</h2>
+
+    <div id="account" class="container-in-header">
+      <span class="account-items">Oth</span>
+      <span class="account-items">Butt</span>
+      <span class="account-items">Acct</span>
     </div>
   </div>
 
-  <!--Main Content-->
-  <div class="container">
-    <ul class="side-menu">
+  <div id="content">
+    <ul id="content-navigation-menu">
       <li>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
         <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
@@ -55,11 +61,12 @@
         <span>Library</span>
       </li>  
     </ul>
+
     <!--Next to Bar-->
-    <div class="stretch">
+    <div class="content-other">
       <!--Scrolling Options-->
-      <div class="scroll-list"> <!--To Do make these buttons based off the user frequent tags-->
-        <div class="scrollabe-buttons" id="scrollable-buttons">
+      <div class="scroll-list" > <!--To Do make these buttons based off the user frequent tags-->
+        <!-- <div class="scrollabe-buttons" id="scrollable-buttons">
           <button class="scroll-button">All</button>
           <button class="scroll-button">Interior design</button>
           <button class="scroll-button">Paint</button>
@@ -73,11 +80,11 @@
           <button class="scroll-button">Reptiles</button>
           <button class="scroll-button">Podcasts</button>
           <button class="scroll-button" id="arrow">Arrow</button>
-        </div>
+        </div> -->
       </div>
 
       <!--Videos-->
-      <div>
+      <div id="content-video">
         Videos
       </div>
       
@@ -87,6 +94,8 @@
   <!--Side Bar-->
 
   </div>
+
+</div>
 </body>
 
 </html>

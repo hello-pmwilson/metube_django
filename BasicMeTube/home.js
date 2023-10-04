@@ -1,20 +1,20 @@
-function menuList() {   
-    console.log(window.innerWidth)
-    if (window.innerWidth < 1200) {
-      document.querySelectorAll('span').forEach(function(span){
-        span.style.display = 'block';
-      })
+// function menuList() {   
+//     console.log(window.innerWidth)
+//     if (window.innerWidth < 1200) {
+//       document.querySelectorAll('span').forEach(function(span){
+//         span.style.display = 'block';
+//       })
       
-  } else {
-      document.querySelectorAll('span').forEach(function(span){
-        span.style.display = 'inline';
-      })
-  }
+//   } else {
+//       document.querySelectorAll('span').forEach(function(span){
+//         span.style.display = 'inline';
+//       })
+//   }
     
-}
+// }
 
-window.addEventListener('resize', menuList);
-menuList();
+// window.addEventListener('resize', menuList);
+// menuList();
 
 // window.addEventListener('DOMContentLoaded', ()=>{
 // const element = document.getElementById('arrow');
