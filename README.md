@@ -4,7 +4,7 @@ MeTube using Django
 Dependencies:
 Django
 
-You can install dependencies with 
+You can install dependencies with
 pip django
 
 To Do:
