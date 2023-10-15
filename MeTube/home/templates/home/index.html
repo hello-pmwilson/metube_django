@@ -1,81 +1,50 @@
 <!DOCTYPE html>
-<html lang="" en">
-<head>
-  <meta charset="utf-8">
-  {% load bootstrap5 %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
-  {% load bootstrap_icons %}
-  {% load static %}
-  <title>Home</title>
-  <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
-  <script src="{% static 'home/js/loadVideos.js' %}"></script>
-
+<html lang=""en">
+    <head>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% load bootstrap_icons %}
+        {% load static %}
+        <title>Home</title>
+        <link rel="stylesheet" href="{% static 'home/home.css' %}">
+        <script>
+        //Check the size of the flex container
+        document.addEventListener('DOMContentLoaded', function(){
+            window.addEventListener("resize", function(){
+                var flexContainer = document.getElementById('search-bar-flex');
+                console.log(flexContainer)
+                var containerWidth = flexContainer.clientWidth;
+                console.log('Flex:' , containerWidth, 'pixels');
+            })    
+        })
+        //script currently records the width of the div with the search bar
+        //but the width isnt actually changing.
+        //todo make the search bar change size when larger
+        //and then dissappear when too small
+        </script>
 </head>
-
-<body>
-<div id="wrapper">
-  <div id="header">
-
-    <div class="container-in-header flex-center">
-      <div id="navigation" class="flex-center">
-        {% bs_icon 'list' extra_classes='navigation'%}
-      </div>
-      <div id="logo">
-        {% bs_icon 'youtube'%} MeTube
-      </div>
-    </div>
-
-    <div id="search" class="flex-center">
-      <input id="search-bar">
-    </div>
-
-    <div id="account" class="container-in-header">
-      <span class="account-items">{% bs_icon 'camera-reels'%}</span>
-      <span class="account-items">{% bs_icon 'bell'%}</span>
-      <span class="account-items">
-        <div class="account-circle"></div>
-      </span>
-    </div>
-  </div>
-
-  <div id="content">
-    <ul id="content-navigation-menu">
-      <li>
-        {% bs_icon 'house-door-fill' extra_classes='content-navigation-menu-options'%}
-        <a>Home</a>
-      </li>
-      <li>
-        {% bs_icon 'film' extra_classes='content-navigation-menu-options'%}
-        <a>Shorts</a>
-      </li>
-      <li>
-        {% bs_icon 'fast-forward-btn' extra_classes='content-navigation-menu-options'%}
-        <a>Subscriptions</a>
-      </li>
-      <li>
-        {% bs_icon 'fast-forward-btn-fill' extra_classes='content-navigation-menu-options'%}
-        <a>Library</a>
-      </li>
-    </ul>
-
-    <div id="content-other">
-      <div id="scroll-list" >
-        <button class="scroll-button" autofocus>Button</button>
-        <button class="scroll-button">Button</button>
-        <button class="scroll-button">Button</button>
-        <button class="scroll-button">Button</button>
-      </div>
-
-      <div id="content-video">
-        <div id="general-video"></div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div> <!-- Wrapper Div-->
-</body>
-
+    </head>
+    <body>
+        <h1>Hello, World</h1>
+        <div id="container" class="d-flex flex-row"><!--Main Head container-->
+            <div class="d-flex p-3 bigger-icon"><!--Menu and Logo-->
+                <div id="list-container" class="list-container d-flex justify-content-center align-items-center">
+            <!-- List Icon from Bootstrap for Menu-->
+                    {% bs_icon 'list' extra_classes="attention" size='2em' %}
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    {% bs_icon 'youtube' size='2em'%}
+                    <h2>MeTube</h2>
+                </div>
+            </div>
+            <div id="search-bar-flex" class="p-6"> 
+                <h2>Search</h2>
+                <input id="search-bar"> <!-- Search Bar -->
+            </div>
+            <div class="p-3">
+                <h2>Other Buttons Icons</h2>
+            </div>
+        </div>
+    </body>
 </html>

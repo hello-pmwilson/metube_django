@@ -8,16 +8,15 @@ from .forms import VideoUploadForm
 def upload(request):
     return render(request, "upload/upload.html")
 
-
 def upload_video(request):
     if request.method == "POST":
         form = VideoUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            # Process Form Data###
+            #Process Form Data###
             form.save()
-            return HttpResponseRedirect(reverse("home:home"))
-
+            return HttpResponseRedirect(reverse('home:home'))
+    
     else:
         form = VideoUploadForm()
-        # return render(request, 'upload_video.html', {'form' : form})
-        return render(request, "upload/upload_video.html", {"form": form})
+        #return render(request, 'upload_video.html', {'form' : form})
+        return render(request, "upload/upload_video.html", {"form" : form})
