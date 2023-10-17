@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 95%;
+    margin: auto;
+    overscroll-behavior: auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    min-height: 50px;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-in-header {
+    flex-direction: row;
+    width:150px;
+}
+
+#navigation {
+    position: relative;
+    width: 50px;
+}
+
+#navigation:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#logo {
+    width: 100px;
+}
+
+#search {
+    flex-grow: 1;
+}
+
+#search-bar {
+    width: 80%;
+    border-radius: 50px;
+}
+
+#account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.account-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: lightblue;
+}
+#content {
+    display: flex;
+    flex-direction: row;
+}
+
+#content-navigation-menu {
+    list-style-type: none;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.content-navigation-menu-options {
+    width: 50px;
+}
+
+#content-navigation-menu li {
+    display: flex;
+    justify-content: start;
+}
+
+@media (max-width: 1400px) {
+    #content-navigation-menu li{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content-navigation-menu a{
+        font-size: x-small;
+    }
+
+    #content-navigation-menu svg {
+        width: 50px;
+    }
+
+    #content-navigation-menu {
+        width: 50px;
+    }
+
+}
+
+#content-other {
+    flex-grow: 1;
+}
+
+
+.scroll-button{
+    background-color: lightgrey;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: grey;
+}
+
+.scroll-button:focus {
+    background-color: black;
+    color: white;
+}
+
+#general-video {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video {
+    width: 23%;
+    aspect-ratio: 16/9;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 1%;
+}
+
+@media (max-width: 1200px) {
+    .video {
+        width: 31.33%;
+    }
+}
+
+@media (max-width: 900px) {
+    .video {
+        width: 48%
+    }
+}
+
+@media (max-width: 600px) {
+    .video {
+        width: 100%;
+    }
+}
+
+/* .scroll-list {
+    white-space: nowrap;
+    min-height: 50px;
+}
+
+.scrollable-buttons {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-button {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+} */
+
+/* .transparent-rectangle {
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(to right, rgba(255,255,255,0.25), rgb(255,255,255,1));
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    left: -175px;
+    top: 20px;
+}
+
+#arrow {
+    background-color: white;
+    border-style: double;
+    position: relative;
+    z-index: 2;
+} */
